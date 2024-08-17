@@ -49,7 +49,7 @@ def test_set_empty_all_operand_value():
         operands = Operands()
 
 
-def test_operands_factory_function():
+def test_operands_factory():
 
     result = operands_factory(5, 6)
 
