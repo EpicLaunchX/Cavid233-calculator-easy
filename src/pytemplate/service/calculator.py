@@ -2,7 +2,6 @@ from pytemplate.domain.models import Operands
 
 
 class Calculator:
-    # add(), subtract(), multiply(), and divide()
 
     def add(self, operands: Operands) -> int:
 
