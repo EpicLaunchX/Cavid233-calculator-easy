@@ -1,6 +1,9 @@
+from unittest import mock
+
 import pytest
 
 from src.pytemplate.domain.models import Operands, operands_factory
+from src.pytemplate.entrypoints.cli.main import main
 from src.pytemplate.service.calculator import Calculator
 
 
@@ -54,3 +57,9 @@ def test_operands_factory():
     result = operands_factory(5, 6)
 
     assert isinstance(result, Operands) == True
+
+
+def test_main_divide():
+    with mock.patch("builtins.input", return_value="6,3,divide") as mock_result:
+        result = main()
+        assert result == 2
