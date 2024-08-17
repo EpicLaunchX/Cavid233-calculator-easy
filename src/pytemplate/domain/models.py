@@ -6,6 +6,11 @@ class Operands:
     first_operand: int
     second_operand: int
 
+    @classmethod
+    def operands_factory(cls, first_operand, second_operand):
+
+        return cls(first_operand, second_operand)
+
 
 # class Operands:
 
