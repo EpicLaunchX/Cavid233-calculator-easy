@@ -1,6 +1,6 @@
 import pytest
 
-from pytemplate.domain.models import Operands
+from pytemplate.domain.models import Operands, operands_factory
 
 
 def test_set_class_values():
@@ -26,6 +26,6 @@ def test_set_empty_all_operand_value():
 
 def test_operands_factory_function():
 
-    result = Operands.operands_factory(5, 6)
+    result = operands_factory(5, 6)
 
     assert isinstance(result, Operands) == True
