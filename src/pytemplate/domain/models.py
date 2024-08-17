@@ -1,33 +1,39 @@
-from utils.assign import set_value
+from dataclasses import dataclass
 
 
+@dataclass
 class Operands:
+    first_operand: int
+    second_operand: int
 
-    def __init__(self, first_operand: int, second_operand: int):
 
-        self.__first_operand = set_value(first_operand, int)
-        self._second_operand = set_value(second_operand, int)
+# class Operands:
 
-    @property
-    def first_operand(self):
-        return self.__first_operand
+#     def __init__(self, first_operand: int, second_operand: int):
 
-    @first_operand.setter
-    def first_operand(self, value):
+#         self.__first_operand = set_value(first_operand, int)
+#         self._second_operand = set_value(second_operand, int)
 
-        if not isinstance(value, int):
-            raise ValueError("Operand must be Integer")
+#     @property
+#     def first_operand(self):
+#         return self.__first_operand
 
-        self.__first_operand = value
+#     @first_operand.setter
+#     def first_operand(self, value):
 
-    @property
-    def second_operand(self):
-        return self._second_operand
+#         if not isinstance(value, int):
+#             raise ValueError("Operand must be Integer")
 
-    @second_operand.setter
-    def second_operand(self, value):
+#         self.__first_operand = value
 
-        if not isinstance(value, int):
-            raise ValueError("Operand must be Integer")
+#     @property
+#     def second_operand(self):
+#         return self._second_operand
 
-        self.second_operand = value
+#     @second_operand.setter
+#     def second_operand(self, value):
+
+#         if not isinstance(value, int):
+#             raise ValueError("Operand must be Integer")
+
+#         self.second_operand = value

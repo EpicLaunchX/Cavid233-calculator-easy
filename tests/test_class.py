@@ -9,16 +9,6 @@ def test_set_class_values():
     assert operands.second_operand == 6
 
 
-def test_set_wrong_type_first_operand_value():
-    with pytest.raises(TypeError) as e:
-        operands = Operands("5", 6)
-
-
-def test_set_wrong_type_second_operand_value():
-    with pytest.raises(TypeError) as e:
-        operands = Operands(5, "6")
-
-
 def test_set_empty_second_operand_value():
     with pytest.raises(TypeError) as e:
         operands = Operands(5)
@@ -32,8 +22,3 @@ def test_set_empty_second_operand_value():
 def test_set_empty_all_operand_value():
     with pytest.raises(TypeError) as e:
         operands = Operands()
-
-
-def test_set_wrong_both_operand_value():
-    with pytest.raises(TypeError) as e:
-        operands = Operands("5", "6")
